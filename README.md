@@ -61,3 +61,46 @@ For these exercises, wrap your logic in a single `console.log` statement:
 - Code readability and efficiency.
 - Thoughtful commentary and explanation of your solution approach and decision-making process.
 
+Basic Exercises:
+ForEach Basics:
+Logs each name and province to the console.
+Pairs each name with a matching province in the format "Name (Province)".
+
+Uppercase Transformation:
+Uses map to create a new array of province names in uppercase.
+
+Name Lengths:
+Uses map to create an array containing the length of each name.
+
+Sorting:
+Uses sort to alphabetically sort the provinces array.
+
+Filtering Cape:
+Uses filter to remove provinces containing “Cape” from the array and logs the count of remaining provinces.
+
+Finding 'S':
+Uses map to create a boolean array indicating whether each name contains the letter 'S'.
+
+Object Mapping:
+Uses reduce to create an object mapping each name to its corresponding province.
+
+Advanced Exercises:
+Log Products:
+Uses map to log each product name in the products array.
+
+Filter by Name Length:
+Uses filter to create a list of products with names that are 5 characters or fewer.
+
+Price Manipulation:
+Uses filter to exclude products without prices, map to convert prices to numbers, and reduce to calculate the total price of the remaining products.
+
+Concatenate Product Names:
+Uses reduce to concatenate all product names into a single string.
+
+Find Extremes in Prices:
+Filters and converts product prices to numbers, then uses reduce to find the highest and lowest-priced items, returning a string in the format “Highest: X. Lowest: Y.”
+
+Object Transformation:
+Uses Object.entries and reduce to transform each product object to have name and cost keys with their original values.
+
+No errors of area's of difficulty

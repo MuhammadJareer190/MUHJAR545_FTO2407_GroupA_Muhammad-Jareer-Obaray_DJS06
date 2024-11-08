@@ -52,3 +52,41 @@ const provinceMapping = names.reduce((acc, name, index) => {
   return acc;
 }, {});
 console.log(provinceMapping);
+
+// Advanced Exercises
+
+// Exercise 1: Log Products
+console.log("\nAdvanced Exercise 1:");
+console.log(products.map(product => product.product));
+
+// Exercise 2: Filter by Name Length
+console.log("\nAdvanced Exercise 2:");
+console.log(products.filter(product => product.product.length <= 5));
+
+// Exercise 3: Price Manipulation
+console.log("\nAdvanced Exercise 3:");
+const totalCost = products
+  .filter(product => product.price && !isNaN(product.price)) // Filter out products without prices
+  .map(product => ({ ...product, price: Number(product.price) })) // Convert prices to numbers
+  .reduce((acc, product) => acc + product.price, 0); // Sum prices
+console.log(totalCost);
+
+// Exercise 4: Concatenate Product Names
+console.log("\nAdvanced Exercise 4:");
+const concatenatedNames = products.reduce((acc, product) => acc + product.product, '');
+console.log(concatenatedNames);
+
+// Exercise 5: Find Extremes in Prices
+console.log("\nAdvanced Exercise 5:");
+const pricedProducts = products.filter(product => product.price && !isNaN(product.price)).map(product => ({ ...product, price: Number(product.price) }));
+const maxPriceProduct = pricedProducts.reduce((max, product) => product.price > max.price ? product : max, pricedProducts[0]);
+const minPriceProduct = pricedProducts.reduce((min, product) => product.price < min.price ? product : min, pricedProducts[0]);
+console.log(`Highest: ${maxPriceProduct.product}. Lowest: ${minPriceProduct.product}.`);
+
+// Exercise 6: Object Transformation
+console.log("\nAdvanced Exercise 6:");
+const transformedProducts = Object.entries(products).reduce((acc, [index, product]) => {
+  acc[product.product] = { name: product.product, cost: product.price };
+  return acc;
+}, {});
+console.log(transformedProducts);
